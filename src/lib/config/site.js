@@ -3,11 +3,27 @@
  * Update these values when changing domains or site information
  */
 
-// Set your production domain here (without protocol)
-export const domain = 'yttoolbox.com';
+// GitHub Pages configuration
+const isGitHubPages = true; // Set to true for GitHub Pages, false for custom domain
+const githubUsername = 'kazedevs';
+const repositoryName = 'YttoolBox';
 
-// Full URL with protocol
-export const siteUrl = `https://${domain}`;
+// Base path for GitHub Pages or empty for custom domain
+export const basePath = isGitHubPages ? `/${repositoryName}` : '';
+
+// Domain configuration
+let domain;
+export let siteUrl;
+
+if (isGitHubPages) {
+  // GitHub Pages domain
+  domain = `${githubUsername}.github.io`;
+  siteUrl = `https://${domain}${basePath}`;
+} else {
+  // Custom domain setup
+  domain = 'yttoolbox.com'; // Your custom domain
+  siteUrl = `https://${domain}`;
+}
 
 // Site metadata
 export const siteMeta = {
@@ -36,5 +52,14 @@ export function getPageUrl(path) {
   if (!path.startsWith('/')) {
     path = '/' + path;
   }
-  return `${siteUrl}${path}`;
+  
+  // For GitHub Pages, we need to ensure the base path is included
+  // but we don't want to add it twice if the path already includes it
+  if (basePath && !path.startsWith(basePath)) {
+    // If using GitHub Pages and path doesn't already include the base path
+    return `${siteUrl}${path}`;
+  } else {
+    // For custom domain or if path already includes base path
+    return `${siteUrl}${path}`;
+  }
 }
