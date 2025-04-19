@@ -75,12 +75,18 @@
   }
   
   function downloadThumbnail(url, filename) {
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename || 'youtube-thumbnail.jpg';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    fetch(url)
+      .then(response => response.blob())
+      .then(blob => {
+        const blobUrl = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = filename || 'youtube-thumbnail.jpg';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(blobUrl);
+      });
   }
   
   // Generate share URLs for different platforms
