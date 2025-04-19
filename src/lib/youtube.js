@@ -94,3 +94,25 @@ export function generateTags(title) {
   
   return [...uniqueWords, ...commonTags];
 }
+
+export async function getVideoTags(videoId) {
+  try {
+    // For now, return some sample tags since we don't have API access
+    return [
+      'youtube',
+      'video',
+      'content creator',
+      'tutorial',
+      'how to',
+      'tips',
+      'tricks',
+      'social media',
+      'marketing',
+      'growth',
+      videoId // include the video ID as a tag for demonstration
+    ];
+  } catch (error) {
+    console.error('Error getting video tags:', error);
+    return [];
+  }
+}

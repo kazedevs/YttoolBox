@@ -33,7 +33,7 @@
       <div class="p-6">
         <h2 class="text-xl font-bold text-gray-800 mb-2">Thumbnail Downloader</h2>
         <p class="text-gray-600 mb-4">Download high-quality thumbnails from any YouTube video in multiple resolutions.</p>
-        <a href="/tools" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        <a href="/tools/thumbnail-downloader" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
           Try it now
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -52,7 +52,7 @@
       <div class="p-6">
         <h2 class="text-xl font-bold text-gray-800 mb-2">Title Extractor</h2>
         <p class="text-gray-600 mb-4">Extract and copy YouTube video titles with one click. Perfect for research and sharing.</p>
-        <a href="/tools" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        <a href="/tools/title-extractor" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
           Try it now
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -61,17 +61,36 @@
       </div>
     </div>
     
-    <!-- Tags Tool -->
+    <!-- Comments Extractor -->
     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
       <div class="h-40 bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center text-white p-4">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
         </svg>
       </div>
       <div class="p-6">
-        <h2 class="text-xl font-bold text-gray-800 mb-2">Tags Generator</h2>
-        <p class="text-gray-600 mb-4">Generate optimized tags for your YouTube videos to improve discoverability and SEO.</p>
-        <a href="/tools" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+        <h2 class="text-xl font-bold text-gray-800 mb-2">Comments Extractor</h2>
+        <p class="text-gray-600 mb-4">Extract and download comments from any YouTube video</p>
+        <a href="/tools/comments-extractor" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+          Try it now
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- PFP Downloader -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+      <div class="h-40 bg-gradient-to-r from-pink-500 to-pink-600 flex items-center justify-center text-white p-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      </div>
+      <div class="p-6">
+        <h2 class="text-xl font-bold text-gray-800 mb-2">PFP Downloader</h2>
+        <p class="text-gray-600 mb-4">Download high-quality profile pictures from any YouTube channel</p>
+        <a href="/tools/pfp-downloader" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
           Try it now
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
