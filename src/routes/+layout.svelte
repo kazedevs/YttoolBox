@@ -1,6 +1,18 @@
-<script>
+<script lang="ts">
   import '../app.css';
   let isMenuOpen = false;
+  
+  // Google Analytics initialization
+  if (typeof window !== 'undefined') {
+    // @ts-ignore
+    window.dataLayer = window.dataLayer || [];
+    // @ts-ignore
+    function gtag(...args: any[]){window.dataLayer.push(arguments);}
+    // @ts-ignore
+    gtag('js', new Date());
+    // @ts-ignore
+    gtag('config', 'G-5GPDFL5PPC');
+  }
   
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
@@ -38,6 +50,10 @@
     }
   }
 </script>
+
+<svelte:head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5GPDFL5PPC"></script>
+</svelte:head>
 
 <div class="min-h-screen flex flex-col bg-gray-50">
   <!-- Header with navigation -->
