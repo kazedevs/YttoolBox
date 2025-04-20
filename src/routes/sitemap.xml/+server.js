@@ -2,7 +2,7 @@ import { json } from "@sveltejs/kit";
 
 const pages = ["", "tools", "blog", "about", "contact", "privacy"];
 
-/** @type {import('./$types').RequestHandler} */
+/** @type {import('@sveltejs/kit').RequestHandler} */
 export async function GET({ url }) {
   const baseUrl = url.origin;
 

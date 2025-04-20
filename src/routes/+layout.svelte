@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte';
+  import JsonLd from '$lib/components/JsonLd.svelte';
   let isMenuOpen = false;
   
   function toggleMenu() {
@@ -41,9 +42,26 @@
 </script>
 
 <GoogleAnalytics />
+<JsonLd />
 
 <svelte:head>
-  <!-- Google Analytics is now handled by the GoogleAnalytics component -->
+  <!-- Default meta tags for SEO -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="YtToolBox - Free YouTube tools for content creators and viewers. Enhance your YouTube experience with our suite of powerful tools." />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="google" content="notranslate" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="YtToolBox - Free YouTube Tools" />
+  <meta property="og:description" content="Enhance your YouTube experience with our suite of powerful tools for content creators and viewers." />
+  <meta property="og:url" content="https://yttoolbox.example.com" />
+  <meta property="og:site_name" content="YtToolBox" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="YtToolBox - Free YouTube Tools" />
+  <meta name="twitter:description" content="Enhance your YouTube experience with our suite of powerful tools for content creators and viewers." />
+  <link rel="canonical" href="https://yttoolbox.example.com" />
 </svelte:head>
 
 <div class="min-h-screen flex flex-col bg-gray-50">

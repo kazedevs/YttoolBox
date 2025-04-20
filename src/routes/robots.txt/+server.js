@@ -1,11 +1,12 @@
-/** @type {import('./$types').RequestHandler} */
+/** @type {import('@sveltejs/kit').RequestHandler} */
 export async function GET({ url }) {
   const baseUrl = url.origin;
 
   const robotsTxt = `User-agent: *
 Allow: /
 
-Sitemap: ${baseUrl}/sitemap.xml`;
+# Sitemaps
+Sitemap: ${baseUrl}/sitemap_index.xml`;
 
   return new Response(robotsTxt, {
     headers: {
