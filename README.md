@@ -6,7 +6,8 @@ A minimal, fast-loading, mobile-friendly YouTube Tools bundle built with SvelteK
 
 - **YouTube Thumbnail Downloader**: Extract and download thumbnails in multiple resolutions
 - **YouTube Title Extractor**: Extract video titles with copy-to-clipboard functionality
-- **YouTube Tags Generator**: Generate tags based on video title
+- **YouTube Pfp Downloader**: Extract and download Pfp
+- **YouTube Comments Extractor**: Extract and download youtube Comments
 
 ## Technical Details
 
