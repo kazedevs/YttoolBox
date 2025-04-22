@@ -1,7 +1,7 @@
 import { json } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 
-const YOUTUBE_API_KEY = "AIzaSyA7YT93K5HiUkI5G9QJzOVxf935Bjfwkfw";
+const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY_COMMENTS;
 
 export const GET: RequestHandler = async ({ url }) => {
   const videoId = url.searchParams.get("videoId");
