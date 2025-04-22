@@ -8,8 +8,8 @@
   <meta property="og:title" content="Privacy Policy | YtToolBox" />
   <meta property="og:description" content="Privacy policy for YtToolBox. Learn how we handle your data and protect your privacy." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yttoolbox.example.com/privacy" />
-  <link rel="canonical" href="https://yttoolbox.example.com/privacy" />
+  <meta property="og:url" content="https://yttoolbox.com/privacy" />
+  <link rel="canonical" href="https://yttoolbox.com/privacy" />
 </svelte:head>
 
 <div class="container mx-auto px-4 py-8">

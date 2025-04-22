@@ -8,8 +8,8 @@
   <meta property="og:title" content="About YtToolBox | Free Online YouTube Tools" />
   <meta property="og:description" content="Learn about YtToolBox - a collection of free online tools for YouTube content creators and viewers to extract thumbnails, titles, and generate tags." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yttoolbox.example.com/about" />
-  <link rel="canonical" href="https://yttoolbox.example.com/about" />
+  <meta property="og:url" content="https://yttoolbox.com/about" />
+  <link rel="canonical" href="https://yttoolbox.com/about" />
 </svelte:head>
 
 <div class="container mx-auto px-4 py-8">
@@ -41,7 +41,7 @@
         <p>YtToolBox was created by a small team of web developers who are passionate about creating useful tools for the YouTube community. We developed this toolbox because we found ourselves frequently needing these features while working with YouTube content.</p>
         
         <h2 class="text-xl font-semibold mt-6 mb-3">Contact Us</h2>
-        <p>Have suggestions for improvements or new tools? We'd love to hear from you! Contact us at feedback@yttoolbox.example.com.</p>
+        <p>Have suggestions for improvements or new tools? We'd love to hear from you! Contact us at feedback@yttoolbox.com.</p>
       </div>
     </div>
   </div>

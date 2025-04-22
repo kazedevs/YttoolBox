@@ -31,8 +31,8 @@
   <meta property="og:title" content="Contact Us | YtToolBox" />
   <meta property="og:description" content="Get in touch with the YtToolBox team. We'd love to hear your feedback, questions, or suggestions." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yttoolbox.example.com/contact" />
-  <link rel="canonical" href="https://yttoolbox.example.com/contact" />
+  <meta property="og:url" content="https://yttoolbox.com/contact" />
+  <link rel="canonical" href="https://yttoolbox.com/contact" />
 </svelte:head>
 
 <div class="container mx-auto px-4 py-8">

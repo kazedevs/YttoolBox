@@ -9,8 +9,8 @@
   <meta property="og:title" content="YtToolBox Blog - YouTube Tips, Tricks, and Tutorials" />
   <meta property="og:description" content="Explore our blog for the latest YouTube tips, tutorials, and strategies to improve your channel growth and video performance." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yttoolbox.example.com/blog" />
-  <link rel="canonical" href="https://yttoolbox.example.com/blog" />
+  <meta property="og:url" content="https://yttoolbox.com/blog" />
+  <link rel="canonical" href="https://yttoolbox.com/blog" />
 </svelte:head>
 
 <div class="max-w-5xl mx-auto px-4 py-8">

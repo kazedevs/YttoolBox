@@ -33,8 +33,8 @@
   <meta property="og:title" content="YtToolBox - Free YouTube Tools | Thumbnail, Title, and Tags" />
   <meta property="og:description" content="Free tools for YouTube content creators and viewers. Download thumbnails, extract titles, and generate tags." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yttoolbox.example.com/tools" />
-  <link rel="canonical" href="https://yttoolbox.example.com/tools" />
+  <meta property="og:url" content="https://yttoolbox.com/tools" />
+  <link rel="canonical" href="https://yttoolbox.com/tools" />
 </svelte:head>
 
 <div class="max-w-5xl mx-auto px-4 py-8">

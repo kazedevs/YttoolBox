@@ -72,8 +72,8 @@
   <meta property="og:title" content="YtToolBox - YouTube Comment Extractor | Free Online Tool" />
   <meta property="og:description" content="Extract and download comments from any YouTube video with our free online tool. No signup required." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yttoolbox.example.com/tools/comments-extractor" />
-  <link rel="canonical" href="https://yttoolbox.example.com/tools/comments-extractor" />
+  <meta property="og:url" content="https://yttoolbox.com/tools/comments-extractor" />
+  <link rel="canonical" href="https://yttoolbox.com/tools/comments-extractor" />
 </svelte:head>
 
 <div class="max-w-5xl mx-auto px-4 py-8">
