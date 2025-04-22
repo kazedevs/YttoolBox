@@ -3,7 +3,7 @@
   
   export let title = 'YtToolBox - Free YouTube Tools';
   export let description = 'Enhance your YouTube experience with our suite of powerful tools for content creators and viewers.';
-  export let url = 'https://yttoolbox.example.com';
+  export let url = 'https://yttoolbox.com';
   export let type = 'WebApplication';
   
   onMount(() => {

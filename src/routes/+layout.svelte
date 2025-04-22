@@ -12,8 +12,16 @@
     isMenuOpen = false;
   }
   
+  // Close menu when clicking outside
+  function handleClickOutside(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    if (!target.closest('.mobile-menu') && !target.closest('.menu-button')) {
+      closeMenu();
+    }
+  }
+  
   // Generate share URLs for different platforms
-  function getShareUrl(platform) {
+  function getShareUrl(platform: string): string {
     // This will be set on the client-side
     let pageUrl = '';
     let title = 'Check out YtToolBox - Free YouTube tools for content creators and viewers';
@@ -21,7 +29,7 @@
     if (typeof window !== 'undefined') {
       pageUrl = window.location.href;
     } else {
-      pageUrl = 'https://yttoolbox.example.com';
+      pageUrl = 'https://yttoolbox.com';
     }
     
     switch (platform) {
@@ -47,7 +55,7 @@
 <svelte:head>
   <!-- Default meta tags for SEO -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="description" content="YtToolBox - Free YouTube tools for content creators and viewers. Enhance your YouTube experience with our suite of powerful tools." />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
@@ -56,15 +64,15 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="YtToolBox - Free YouTube Tools" />
   <meta property="og:description" content="Enhance your YouTube experience with our suite of powerful tools for content creators and viewers." />
-  <meta property="og:url" content="https://yttoolbox.example.com" />
+  <meta property="og:url" content="https://yttoolbox.com" />
   <meta property="og:site_name" content="YtToolBox" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="YtToolBox - Free YouTube Tools" />
   <meta name="twitter:description" content="Enhance your YouTube experience with our suite of powerful tools for content creators and viewers." />
-  <link rel="canonical" href="https://yttoolbox.example.com" />
+  <link rel="canonical" href="https://yttoolbox.com" />
 </svelte:head>
 
-<div class="min-h-screen flex flex-col bg-gray-50">
+<div class="min-h-screen flex flex-col bg-gray-50" on:click={handleClickOutside}>
   <!-- Header with navigation -->
   <header class="bg-white shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-4">
@@ -85,7 +93,7 @@
         
         <!-- Mobile menu button -->
         <button 
-          class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none" 
+          class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none menu-button" 
           on:click={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -97,20 +105,22 @@
       
       <!-- Mobile Navigation -->
       {#if isMenuOpen}
-        <div class="md:hidden py-3 border-t border-gray-200">
-          <a href="/" class="block py-2 text-gray-700 hover:text-blue-600 font-medium" on:click={closeMenu}>Home</a>
-          <a href="/tools" class="block py-2 text-gray-700 hover:text-blue-600 font-medium" on:click={closeMenu}>Tools</a>
-          <a href="/blog" class="block py-2 text-gray-700 hover:text-blue-600 font-medium" on:click={closeMenu}>Blog</a>
-          <a href="/about" class="block py-2 text-gray-700 hover:text-blue-600 font-medium" on:click={closeMenu}>About</a>
-          <a href="/contact" class="block py-2 text-gray-700 hover:text-blue-600 font-medium" on:click={closeMenu}>Contact</a>
-          <a href="/privacy" class="block py-2 text-gray-700 hover:text-blue-600 font-medium" on:click={closeMenu}>Privacy</a>
+        <div class="md:hidden py-3 border-t border-gray-200 mobile-menu">
+          <div class="flex flex-col space-y-2">
+            <a href="/" class="block py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium" on:click={closeMenu}>Home</a>
+            <a href="/tools" class="block py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium" on:click={closeMenu}>Tools</a>
+            <a href="/blog" class="block py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium" on:click={closeMenu}>Blog</a>
+            <a href="/about" class="block py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium" on:click={closeMenu}>About</a>
+            <a href="/contact" class="block py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium" on:click={closeMenu}>Contact</a>
+            <a href="/privacy" class="block py-2 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium" on:click={closeMenu}>Privacy</a>
+          </div>
         </div>
       {/if}
     </div>
   </header>
   
   <!-- Main content -->
-  <main class="flex-grow">
+  <main class="flex-grow container mx-auto px-4 py-8">
     <slot />
   </main>
   
@@ -118,7 +128,7 @@
   <footer class="bg-white py-6 border-t border-gray-200">
     <div class="container mx-auto px-4">
       <div class="flex flex-col md:flex-row md:justify-between items-center">
-        <div class="mb-4 md:mb-0">
+        <div class="mb-4 md:mb-0 text-center md:text-left">
           <p class="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} YtToolBox. Not affiliated with YouTube.
           </p>
@@ -126,7 +136,7 @@
           <!-- Social sharing buttons -->
           <div class="mt-2">
             <p class="text-gray-500 text-xs mb-2">Share this page:</p>
-            <div class="flex space-x-4">
+            <div class="flex justify-center md:justify-start space-x-4">
               <a 
                 href={getShareUrl('whatsapp')}
                 target="_blank"
@@ -184,7 +194,7 @@
             </div>
           </div>
         </div>
-        <div class="flex space-x-6">
+        <div class="flex flex-wrap justify-center md:justify-end space-x-6 mt-4 md:mt-0">
           <a href="/" class="text-gray-500 hover:text-blue-600 text-sm">Home</a>
           <a href="/tools" class="text-gray-500 hover:text-blue-600 text-sm">Tools</a>
           <a href="/blog" class="text-gray-500 hover:text-blue-600 text-sm">Blog</a>
@@ -196,3 +206,24 @@
     </div>
   </footer>
 </div>
+
+<style>
+  /* Mobile-specific styles */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    /* Improve touch targets */
+    a, button {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Prevent text size adjustment */
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+  }
+</style>

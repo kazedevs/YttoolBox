@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Ensure proper spacing on mobile */
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Improve readability on mobile */
+  p,
+  li,
+  a {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Prevent horizontal scrolling */
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Improve touch targets */
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Better spacing for mobile */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Improve mobile menu */
+  .mobile-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Better spacing for mobile content */
+  main {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* General improvements */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus styles */
+:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Improve button and link interactions */
+button,
+a {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Better form elements on mobile */
+input,
+textarea,
+select {
+  font-size: 16px; /* Prevent zoom on iOS */
+}
