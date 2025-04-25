@@ -82,7 +82,7 @@ export const GET: RequestHandler = async ({ url }) => {
         // For search results, we need to make another request to get the channel details
         const foundChannelId = data.items[0].id.channelId;
         const channelResponse = await fetch(
-          `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${foundChannelId}&key=${YOUTUBE_API_KEY}`
+          `https://www.googleapis.com/youtube/v3/channels?part=snippet,brandingSettings&id=${foundChannelId}&key=${YOUTUBE_API_KEY}`
         );
         const channelData = await channelResponse.json();
 
@@ -136,6 +136,7 @@ export const GET: RequestHandler = async ({ url }) => {
       title: channelInfo.snippet.title,
       description: channelInfo.snippet.description,
       thumbnailUrl,
+      bannerUrl: channelInfo.brandingSettings?.image?.bannerExternalUrl || null
     });
   } catch (error) {
     console.error("Error fetching channel info:", error);

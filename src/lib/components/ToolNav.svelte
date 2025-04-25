@@ -21,6 +21,11 @@
       name: 'pfp',
       label: 'Profile Picture Downloader',
       href: '/tools/pfp-downloader'
+    },
+    {
+      name: 'banner',
+      label: 'Banner Downloader',
+      href: '/tools/banner-downloader'
     }
   ];
 </script>

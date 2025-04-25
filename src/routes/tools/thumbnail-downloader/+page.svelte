@@ -74,8 +74,8 @@
     <meta property="og:title" content="YtToolBox - YouTube Thumbnail Downloader | Free Online Tool" />
     <meta property="og:description" content="Download high quality thumbnails from any YouTube video with our free tool. Get HD, HQ, SD thumbnails with just one click." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yttoolbox.com/tools/thumbnail" />
-    <link rel="canonical" href="https://yttoolbox.com/tools/thumbnail" />
+    <meta property="og:url" content="https://yttoolbox.com/tools/thumbnail-downloader" />
+    <link rel="canonical" href="https://yttoolbox.com/tools/thumbnail-downloader" />
   </svelte:head>
   
   <!-- Copy the thumbnail section from the original file, starting from the div with class="max-w-5xl" -->

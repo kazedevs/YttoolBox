@@ -1,6 +1,18 @@
 import { json } from "@sveltejs/kit";
 
-const pages = ["", "tools", "blog", "about", "contact", "privacy"];
+const pages = [
+  "",
+  "tools",
+  "tools/thumbnail-downloader",
+  "tools/pfp-downloader", 
+  "tools/comments-extractor",
+  "tools/title-extractor",
+  "tools/banner-downloader",
+  "blog",
+  "about",
+  "contact",
+  "privacy"
+];
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function GET({ url }) {
@@ -14,8 +26,8 @@ export async function GET({ url }) {
     <url>
         <loc>${baseUrl}/${page}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
-        <changefreq>${page === "" ? "daily" : "weekly"}</changefreq>
-        <priority>${page === "" ? "1.0" : "0.8"}</priority>
+        <changefreq>${page === "" ? "daily" : page.startsWith("tools/") ? "daily" : "weekly"}</changefreq>
+        <priority>${page === "" ? "1.0" : page.startsWith("tools/") ? "0.9" : "0.7"}</priority>
     </url>`
       )
       .join("")}

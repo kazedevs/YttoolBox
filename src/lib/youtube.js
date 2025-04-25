@@ -6,12 +6,13 @@
 export function extractYoutubeVideoId(url) {
   if (!url) return null;
   
-  // Handle various YouTube URL formats
+  // Updated patterns to handle channel URLs
   const regexPatterns = [
     /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^?&/#]+)/,
     /youtube\.com\/shorts\/([^?&/#]+)/,
     /youtube\.com\/v\/([^?&/#]+)/,
     /youtube\.com\/watch\?.*v=([^?&/#]+)/,
+    /youtube\.com\/@([^\/]+)/ // Add channel username pattern
   ];
 
   for (const regex of regexPatterns) {
@@ -114,5 +115,47 @@ export async function getVideoTags(videoId) {
   } catch (error) {
     console.error('Error getting video tags:', error);
     return [];
+  }
+}
+
+export async function getChannelBanner(identifier) {
+  try {
+    const API_KEY = 'AIzaSyDVarzC_nmS64ovmqNG0sED0cOXuk2c5Xs';
+    
+    // Extract channel handle from URLs
+    const cleanedId = identifier
+      .replace(/^https?:\/\/(www\.)?youtube\.com\//, '')
+      .replace(/^@/, '');
+
+    // Channel ID lookup for @handles
+    const searchResponse = await fetch(
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=${cleanedId}&key=${API_KEY}`
+    );
+    
+    if (!searchResponse.ok) throw new Error('Channel search failed');
+    
+    const searchData = await searchResponse.json();
+    const channelId = searchData.items[0]?.id?.channelId;
+    
+    if (!channelId) throw new Error('Channel not found');
+
+    // Get channel details
+    const channelResponse = await fetch(
+      `https://www.googleapis.com/youtube/v3/channels?part=brandingSettings,snippet&id=${channelId}&key=${API_KEY}`
+    );
+    
+    if (!channelResponse.ok) throw new Error('Channel details unavailable');
+    
+    const channelData = await channelResponse.json();
+    
+    return {
+      username: channelData.items[0].snippet.title,
+      channelUrl: `https://www.youtube.com/channel/${channelId}`,
+      bannerUrl: channelData.items[0].brandingSettings?.image?.bannerExternalUrl || null
+    };
+
+  } catch (error) {
+    console.error('API Error:', error.message);
+    throw new Error(error.message.includes('AIza') ? 'Service unavailable' : error.message);
   }
 }

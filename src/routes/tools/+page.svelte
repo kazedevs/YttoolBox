@@ -23,6 +23,12 @@
       description: 'Download high-quality profile pictures from any YouTube channel',
       icon: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z',
       href: '/tools/pfp-downloader'
+    },
+    {
+      title: 'Banner Downloader',
+      description: 'Download channel banners from any YouTube channel',
+      icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z',
+      href: '/tools/banner-downloader'
     }
   ];
 </script>
@@ -38,22 +44,22 @@
 </svelte:head>
 
 <div class="max-w-5xl mx-auto px-4 py-8">
-  <h1 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-2">YtToolBox</h1>
-  <p class="text-center text-gray-600 mb-6">Free tools for YouTube content creators and viewers</p>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">All Tools</h1>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- REMOVE THIS DUPLICATE CARD -->
     {#each tools as tool}
       <a 
         href={tool.href} 
         class="block bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
       >
-        <div class="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-lg mb-4">
+        <div class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={tool.icon} />
           </svg>
         </div>
         <h2 class="text-xl font-semibold text-gray-800 mb-2">{tool.title}</h2>
-        <p class="text-gray-600">{tool.description}</p>
+        <p class="text-gray-600 text-sm">{tool.description}</p>
       </a>
     {/each}
   </div>
