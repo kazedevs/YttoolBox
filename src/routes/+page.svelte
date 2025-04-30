@@ -116,6 +116,25 @@
         </a>
       </div>
     </div>
+
+    <!-- Audio Downloader Card -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
+      <div class="h-40 bg-gradient-to-r from-indigo-500 to-indigo-600 flex items-center justify-center text-white p-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+        </svg>
+      </div>
+      <div class="p-6">
+        <h2 class="text-xl font-bold text-gray-800 mb-2">Audio Downloader</h2>
+        <p class="text-gray-600 mb-4">Download audio from any YouTube video in various formats</p>
+        <a href="/tools/audio-downloader" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+          Try it now
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
   </div>
   
   <!-- CTA Section -->

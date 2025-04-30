@@ -29,6 +29,12 @@
       description: 'Download channel banners from any YouTube channel',
       icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z',
       href: '/tools/banner-downloader'
+    },
+    {
+      title: 'Audio Downloader',
+      description: 'Download audio from any YouTube video in various formats',
+      icon: 'M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3',
+      href: '/tools/audio-downloader'
     }
   ];
 </script>
