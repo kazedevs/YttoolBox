@@ -8,6 +8,7 @@ A minimal, fast-loading, mobile-friendly YouTube Tools bundle built with SvelteK
 - **YouTube Title Extractor**: Extract video titles with copy-to-clipboard functionality
 - **YouTube Pfp Downloader**: Extract and download Pfp
 - **YouTube Comments Extractor**: Extract and download youtube Comments
+- **Youtube Audio Downloder**: Extract and download youtube video audio
 
 ## Technical Details
 
